@@ -1,0 +1,140 @@
+@import 'vars.scss';
+
+//#########################
+//## Top 0
+//#########################
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  transition: all .3s ease;
+  z-index: 10;
+
+  @media screen and (max-width: $small) {
+    height: 80px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.header__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+
+  @media screen and (max-width: $small) {
+    text-align: center;
+  }
+
+  .logo {
+    display: inline-block;
+    cursor: pointer;
+
+    img {
+      width: 200px;
+      float: left;
+
+      @media screen and (max-width: $small) {
+        width: 170px;
+        float: none;
+      }
+    }
+  }
+
+  .alt {
+    margin-left: 5px;
+    vertical-align: top;
+    font-size: .7rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #FFC7AC;
+    pointer-events: none;
+
+    @media screen and (max-width: $small) {
+      font-size: .6rem;
+    }
+  }
+
+  nav {
+    float: right;
+
+    @media screen and (max-width: $small ) {
+      float: none;
+    }
+
+    a {
+      padding: 10px 20px;
+      border: 1px solid #FFFFFF;
+      border-radius: 1px;
+      color: #FFFFFF;
+      font-size: .9rem;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: lowercase;
+      letter-spacing: 3px;
+
+      @media screen and (max-width: $small) {
+        padding: 5px 20px;
+        border: none;
+        border-bottom: 1px solid #FFFFFF;
+        font-size: .8rem;
+      }
+
+      &:hover {
+        color: #FF8863;
+        border-color: #FF8863;
+      }
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+//#########################
+//## Scrolling
+//#########################
+.header--scroll {
+  height: 60px;
+  border-bottom: none;
+  box-shadow: 0 3px 3px 2px rgba(0, 0, 0, .3);
+  background-color: #000000;
+  opacity: .7;
+
+  @media screen and (max-width: $small) {
+    height: 80px;
+  }
+
+  .header__container {
+    .logo {
+      img {
+        width: 150px;
+
+        @media screen and (max-width: $small) {
+          width: 170px;
+        }
+      }
+    }
+
+    .alt {
+      font-size: .6rem;
+    }
+
+    nav {
+      a {
+        padding: 5px 20px;
+        border: none;
+        border-bottom: 1px solid #FFFFFF;
+        font-size: .8rem;
+      }
+    }
+  }
+}

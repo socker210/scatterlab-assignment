@@ -1,0 +1,67 @@
+@import './vars.scss';
+
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 600px;
+
+  @media screen and (max-width: $small) {
+    height: 400px;
+  }
+}
+
+.jumbotron__bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.jumbotron__opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: .4;
+  z-index: 2;
+}
+
+.jumbotron__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3;
+
+  h1 {
+    margin: 10px;
+    color: #FFFFFF;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h3 {
+    color: #EEEEEE;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $small) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
