@@ -5,11 +5,11 @@ import '../styles/global.scss'
 
 export default class extends React.Component {
   render () {
-    const { Component } = this.props
+    const { Component, router } = this.props
 
     return (
       <>
-        <StickyHeader />
+        <StickyHeader pathname={router.pathname} />
         <Component />
       </>
     )

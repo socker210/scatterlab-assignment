@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import '../styles/stickyHeader.scss'
 
@@ -28,6 +29,8 @@ class StickyHeader extends React.Component {
   }
 
   render () {
+    const { pathname } = this.props
+
     return (
       <header ref={ref => this.header = ref}>
         <div className='header__container'>
@@ -37,13 +40,13 @@ class StickyHeader extends React.Component {
           </a>
           <nav>
             <Link href='/cat'>
-              <a>
+              <a className={pathname === '/cat' ? 'focus' : ''}>
                 <span>cat</span>
                 <i className='fas fa-cat' />
               </a>
             </Link>
             <Link href='/dog'>
-              <a>
+              <a className={pathname === '/dog' ? 'focus' : ''}>
                 <span>dog</span>
                 <i className='fas fa-dog' />
               </a>
@@ -53,6 +56,13 @@ class StickyHeader extends React.Component {
       </header>
     )
   }
+}
+
+StickyHeader.propTypes = {
+  /**
+   * Pathname
+   */
+  pathname: PropTypes.string.isRequired
 }
 
 export default StickyHeader

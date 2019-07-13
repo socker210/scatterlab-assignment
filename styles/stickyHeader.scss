@@ -89,6 +89,11 @@ header {
         font-size: .8rem;
       }
 
+      &.focus {
+        color: #FF8863;
+        border-color: #FF8863;
+      }
+
       &:hover {
         color: #FF8863;
         border-color: #FF8863;
