@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import '../styles/stickyHeader.scss'
 
 class StickyHeader extends React.Component {
@@ -30,19 +31,23 @@ class StickyHeader extends React.Component {
     return (
       <header ref={ref => this.header = ref}>
         <div className='header__container'>
-          <div className='logo'>
+          <a href='/' className='logo'>
             <img src='http://www.scatterlab.co.kr/wp-content/uploads/2016/06/1.png' />
             <span className='alt'>Animals</span>
-          </div>
+          </a>
           <nav>
-            <a href='/cat'>
-              <span>cat</span>
-              <i className='fas fa-cat' />
-            </a>
-            <a href='/dog'>
-              <span>dog</span>
-              <i className='fas fa-dog' />
-            </a>
+            <Link href='/cat'>
+              <a>
+                <span>cat</span>
+                <i className='fas fa-cat' />
+              </a>
+            </Link>
+            <Link href='/dog'>
+              <a>
+                <span>dog</span>
+                <i className='fas fa-dog' />
+              </a>
+            </Link>
           </nav>
         </div>
       </header>

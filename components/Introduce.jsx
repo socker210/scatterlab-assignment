@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 import '../styles/introduce.scss'
 
 const Introduce = ({
@@ -24,9 +25,11 @@ const Introduce = ({
       </div>
       {
         url &&
-        <div className='introduce__href'>
-          <a href={url}>{urlTitle}</a>
-        </div>
+        <Link href={url}>
+          <div className='introduce__href'>
+            <a>{urlTitle}</a>
+          </div>
+        </Link>
       }
     </div>
   </section>
