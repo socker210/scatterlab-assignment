@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "1",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=0",
+    "age": 8,
+    "name": "Tabatha",
+    "gender": "female"
+  },
+  {
+    "_id": "2",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=1",
+    "age": 14,
+    "name": "Marietta",
+    "gender": "female"
+  },
+  {
+    "_id": "3",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=2",
+    "age": 5,
+    "name": "Valerie",
+    "gender": "female"
+  },
+  {
+    "_id": "4",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=3",
+    "age": 12,
+    "name": "Helene",
+    "gender": "female"
+  },
+  {
+    "_id": "5",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=4",
+    "age": 10,
+    "name": "Opal",
+    "gender": "female"
+  },
+  {
+    "_id": "6",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=5",
+    "age": 9,
+    "name": "Guerra",
+    "gender": "male"
+  },
+  {
+    "_id": "7",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=6",
+    "age": 7,
+    "name": "Janie",
+    "gender": "female"
+  },
+  {
+    "_id": "8",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=7",
+    "age": 1,
+    "name": "Darla",
+    "gender": "female"
+  },
+  {
+    "_id": "9",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=7",
+    "age": 1,
+    "name": "Darla",
+    "gender": "female"
+  },
+  {
+    "_id": "10",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=7",
+    "age": 1,
+    "name": "Darla",
+    "gender": "female"
+  },
+  {
+    "_id": "11",
+    "imageUrl": "https://loremflickr.com/320/240/cat?lock=7",
+    "age": 1,
+    "name": "Darla",
+    "gender": "female"
+  }
+]

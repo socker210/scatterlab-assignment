@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "rules": {
+    "eol-last": 0,
+    "no-unused-vars": 1,
+    "no-return-assign": 0,
+    "react/react-in-jsx-scope": 0
+  }
+}
