@@ -1,0 +1,75 @@
+@import './vars.scss';
+
+.animal {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, .2);
+
+  @media screen and (max-width: $xsmall) {
+    height: 220px;
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+
+.animal__img {
+  width: 100%;
+  height: 100%;
+}
+
+.animal_placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1;
+}
+
+.animal__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 35px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .4);
+  box-shadow: 0 -5px 10px 3px rgba(0, 0, 0, .4);
+  z-index: 3;
+
+  .name {
+    margin-right: 6px;
+    color: #FFFFFF;
+    font-size: .9rem;
+  }
+
+  .age {
+    margin-right: 3px;
+    color: #EFEFEF;
+    font-size: .7rem;
+  }
+
+  i {
+    font-size: .7rem;
+
+    &.gender--f {
+      color: #F38EFF;
+    }
+
+    &.gender--m {
+      
+      color: #302387;
+    }
+  }
+}

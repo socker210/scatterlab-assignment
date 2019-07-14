@@ -35,7 +35,7 @@ class StickyHeader extends React.Component {
       <header ref={ref => this.header = ref}>
         <div className='header__container'>
           <a href='/' className='logo'>
-            <img src='http://www.scatterlab.co.kr/wp-content/uploads/2016/06/1.png' />
+            <img src='http://www.scatterlab.co.kr/wp-content/uploads/2016/06/1.png' alt='logo' />
             <span className='alt'>Animals</span>
           </a>
           <nav>
