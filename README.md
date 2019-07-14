@@ -24,6 +24,17 @@
 sudo npm install -g pm2
 ```
 
+
+## 실행
+
+```
+yarn install
+```
+```
+yarn run (dev | prod)
+```
+
+
 ## 명령어
 - yarn run dev
   - 개발을 진행하기 위해 개발용 서버 실행
