@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import InfiniteScroll from 'react-infinite-scroller'
 import { clone, concat } from 'lodash'
 import Jumbotron from '../components/Jumbotron'
-import Loading from '../components/Loading'
+import Message from '../components/Message'
 import AnimalList from '../components/AnimalList'
 
 class AnimalLayout extends React.Component {
@@ -13,7 +13,9 @@ class AnimalLayout extends React.Component {
     this.state = {
       animal: [],
       last: false,
-      current: 0
+      current: 0,
+      err: false,
+      errMessage: undefined
     }
 
     this.loadMore = this.loadMore.bind(this)
@@ -37,14 +39,23 @@ class AnimalLayout extends React.Component {
         })
       },
       error: err => {
-        console.log(err)
+        this.setState({
+          last: true,
+          err: true,
+          errMessage: err.message
+        })
       }
     })
   }
 
   render () {
     const { containerId, jumbotronProps } = this.props
-    const { animal, last } = this.state
+    const {
+      animal,
+      last,
+      err,
+      errMessage
+    } = this.state
 
     return (
       <div id={containerId}>
@@ -52,10 +63,11 @@ class AnimalLayout extends React.Component {
         <InfiniteScroll
           loadMore={this.loadMore}
           hasMore={!last}
-          loader={<Loading key={0} />}
+          loader={<Message message='동물들을 대려오고 있습니다' key={0} />}
         >
           <AnimalList animals={animal} />
         </InfiniteScroll>
+        { err && <Message message={errMessage} /> }
       </div>
     )
   }

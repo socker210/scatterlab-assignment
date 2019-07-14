@@ -1,11 +1,12 @@
 @import './vars.scss';
 
-.loading {
-  width: 100%;
+.message {
   height: 200px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   
   @media screen and (max-width: $small) {
     height: 100px;

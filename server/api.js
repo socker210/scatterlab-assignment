@@ -43,17 +43,29 @@ server.all('/*', (req, res, next) => {
 })
 
 server.get('/cats', (req, res) => {
+  let data
+
   res.set('Content-Type', 'application/json')
 
-  const data = getDataFromJson(cats, parseInt(req.query.current || 0), parseInt(req.query.per || 10))
+  try {
+    data = getDataFromJson(cats, parseInt(req.query.current || 0), parseInt(req.query.per || 10))
+  } catch (error) {
+    res.status(501).send({ message: '서버에서 동물을 대려오는 도중 문제가 발생했어요' })
+  }
 
   res.send(data)
 })
 
 server.get('/dogs', (req, res) => {
+  let data
+
   res.set('Content-Type', 'application/json')
 
-  const data = getDataFromJson(dogs, parseInt(req.query.current || 0), parseInt(req.query.per || 10))
+  try {
+    data = getDataFromJson(dogs, parseInt(req.query.current || 0), parseInt(req.query.per || 10))
+  } catch (error) {
+    res.status(501).send({ message: '서버에서 동물을 대려오는 도중 문제가 발생했어요' })
+  }
 
   res.send(data)
 })
