@@ -15,6 +15,9 @@ module.exports = {
     script: 'server/api.js',
     env: {
       PORT: 3001
+    },
+    env_production: {
+      PORT: 3001
     }
   }]
 }
