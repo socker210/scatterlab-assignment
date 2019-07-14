@@ -36,6 +36,12 @@ function getDataFromJson (data, current, per) {
   return value
 }
 
+server.all('/*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+
+  next()
+})
+
 server.get('/cats', (req, res) => {
   res.set('Content-Type', 'application/json')
 
