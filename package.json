@@ -22,16 +22,37 @@
     "dev": "pm2 start ecosystem.config.js",
     "kill": "pm2 delete ecosystem.config.js",
     "fix": "eslint . --ext .js --ext .jsx --fix",
+    "test": "jest --verbose",
+    "test:watch": "jest --verbose --watch",
     "prod": "next build && pm2 start ecosystem.config.js --env production"
   },
   "browserslist": [
     "last 2 versions"
   ],
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^.+\\.(css|sass|scss)$": "identity-obj-proxy"
+    }
+  },
   "dependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "^9.6.1",
     "axios": "^0.19.0",
+    "babel-jest": "^24.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "express": "^4.17.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
     "lodash": "^4.17.14",
     "next": "^9.0.1",
     "node-sass": "^4.12.0",
