@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const instance = axios.create({ baseURL: 'http://192.168.219.102:3001' })
+const instance = axios.create({ baseURL: 'http://localhost:3001' })
 
 function get (url, params, success, error) {
   instance.get(url, { params })
