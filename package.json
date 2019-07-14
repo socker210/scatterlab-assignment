@@ -23,13 +23,18 @@
     "kill": "pm2 delete ecosystem.config.js",
     "fix": "eslint . --ext .js --ext .jsx --fix"
   },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "autoprefixer": "^9.6.1",
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "lodash": "^4.17.14",
     "next": "^9.0.1",
     "node-sass": "^4.12.0",
+    "postcss": "^7.0.17",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-infinite-scroller": "^1.2.4"
