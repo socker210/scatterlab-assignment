@@ -2,17 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/AnimalCard.scss'
 
-const getGenderIcon = gender => (gender === 'female' ? <i className='gender--f fas fa-venus' /> : <i className='gender--m fas fa-mar' />)
+const getGenderIcon = gender => (gender === 'female' ? <i className='gender--f fas fa-venus' /> : <i className='gender--m fas fa-mars' />)
 
 const AnimalCard = ({
-  img,
+  imageUrl,
   name,
   age,
   gender
 }) => (
   <div className='animal'>
     <div className='animal__img'>
-      <img src={img} alt='animal' />
+      <img src={imageUrl} alt='animal' />
       <div className='animal_placeholder' />
     </div>
     <div className='animal__text'>
@@ -29,7 +29,7 @@ AnimalCard.propTypes = {
   /**
    * Image
    */
-  img: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   /**
    * Name
    */

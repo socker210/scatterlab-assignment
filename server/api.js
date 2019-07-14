@@ -3,7 +3,7 @@ const express = require('express')
 const server = express()
 
 const port = parseInt(process.env.PORT)
-const cats = require('../data/copy.json')
+const cats = require('../data/q1_cat.json')
 const dogs = require('../data/q1_dog.json')
 
 function getDataFromJson (data, current, per) {

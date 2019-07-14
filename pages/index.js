@@ -19,7 +19,7 @@ class Index extends React.Component {
           title='멍멍이와 함께'
           desc='귀여운 멍멍이와 함께 인생을 살아가는건 어떤가요?'
           img='static/images/dog_sample.jpg'
-          url='/cat'
+          url='/dog'
           urlTitle='멍멍이 보러 가기'
         />
         <Introduce
