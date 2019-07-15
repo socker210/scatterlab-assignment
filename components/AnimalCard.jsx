@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../styles/animalCard.scss'
 
 const getGenderIcon = gender => (gender === 'female' ? <i className='gender--f fas fa-venus' /> : <i className='gender--m fas fa-mars' />)
 

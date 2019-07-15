@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AnimalCard from './AnimalCard'
-import '../styles/animalList.scss'
 
 const AnimalList = ({ animals }) => (
   <section className='animalList' role='list'>

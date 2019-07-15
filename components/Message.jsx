@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../styles/message.scss'
 
 const Message = ({ message }) => (
   <div className='message'>
