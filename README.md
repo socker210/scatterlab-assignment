@@ -33,6 +33,9 @@ yarn install
 ```
 yarn run (dev | prod)
 ```
+```
+http://localhost:3000
+```
 
 
 ## 명령어
