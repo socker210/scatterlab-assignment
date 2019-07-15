@@ -10,7 +10,7 @@
 - [Dog 페이지](http://localhost:3000/dog)
   - 강아지 리스트를 볼 수 있는 페이지입니다
 
-**Header**는 Sticky한 스타일로 개발을 하여 하단으로 scrolling시 상단에 붙어있습니다. 또한 Header 우측에 cat & dog 페이지로 이동을 할 수 있는 키테고리 버튼을 두었고 만약 리스트 페이지로 이동을 할 경우 이동한 페이지의 버튼의 색이 변경되도록 개발을 하였습니다.
+**Header**는 Sticky한 스타일로 개발을 하여 하단으로 scrolling시 상단에 붙어있습니다. 또한 Header 우측에 cat & dog 페이지로 이동을 할 수 있는 카테고리 버튼을 두었고 만약 리스트 페이지로 이동을 할 경우 이동한 페이지의 버튼의 색이 변경되도록 개발을 하였습니다.
 
 **각 동물의 리스트**를 보여주는 방식은 하단으로 scrolling시 데이터를 자동으로 불러오는 infinite scrolling 방식으로 구현을 하였습니다. (infinite scrolling기능은 외부 라이브러리를 사용하였습니다)
 
@@ -40,7 +40,7 @@ http://localhost:3000
 
 ## 명령어
 - yarn run dev
-  - 개발을 진행하기 위해 개발용 서버 실행
+  - 개발을 진행하기 위한 개발용 서버 실행
 - yarn run kill
   - PM2에서 실행되고 있는 client, api서버 instance 제거
 - yarn run fix
@@ -55,7 +55,7 @@ http://localhost:3000
 
 ## 프로젝트 구조
 - api/
-  - API호출을 하기위해 API를 정의해 놓은 폴더
+  - API호출을 하기 위해 API를 정의해 놓은 폴더
 - components/
   - React component 폴더
 - data/
@@ -77,10 +77,10 @@ http://localhost:3000
 React + Nextjs를 사용하여 개발하였습니다
 
 ### Server
-express.js를 사용하여 Nextjs를 사용하는데 필요한 client용 서버와 데이터를 request 하기위해 간단한 api용 서버를 개발하였습니다.
+express.js를 사용하여 Nextjs를 사용하는데 필요한 client용 서버와 데이터를 request 하기 위해 간단한 api용 서버를 개발하였습니다.
 
 ### Style
-SCSS를 사용하여 개발하였습니다. Gulp 등을 사용해 Link태그를 이용하여 불러오는 방식이 아닌 Nextjs에서 제공하는 plugin인 next-sass를 사용하였습니다. vendor prefix같은 경우는 postcss의 plugin인 autoprefixer를 사용하였습니다. class 정의는 BEM을 따랐습니다. (설정은 package.json에 있습니다)
+SCSS를 사용하여 개발하였습니다. Gulp 등을 사용해 Link태그를 이용하여 불러오는 방식이 아닌 Nextjs에서 제공하는 plugin인 next-sass를 사용하였습니다. vendor prefix같은 경우는 postcss의 plugin인 autoprefixer를 사용하였습니다. class명칭 정의는 BEM을 따랐습니다. (설정은 package.json에 있습니다)
 
 ### Lint
 Eslint + standard를 사용하였습니다.

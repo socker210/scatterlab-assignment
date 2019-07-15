@@ -12,7 +12,6 @@ class Cat extends React.Component {
           title: '냥냥이 리스트',
           desc: '냥냥이를 볼 수 있는 리스트입니다'
         }}
-        test={{ haha: 'aDASD' }}
         api={fetchCats}
       />
     )
